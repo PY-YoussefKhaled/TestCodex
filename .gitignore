@@ -1,0 +1,20 @@
+# Node
+client/node_modules/
+client/dist/
+client/.angular/
+client/package-lock.json
+client/npm-debug.log
+client/yarn-error.log
+
+# Dotnet
+server/bin/
+server/obj/
+server/*.db
+server/appsettings.*.local.json
+
+# IDE
+.vscode/
+.idea/
+*.user
+*.suo
+*.userprefs
