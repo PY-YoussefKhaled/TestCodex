@@ -1,0 +1,23 @@
+<section class="note-editor">
+  <a routerLink="/" class="back-link">← Back to notes</a>
+
+  <h2>{{ isEditMode() ? 'Edit note' : 'Create note' }}</h2>
+
+  <form [formGroup]="form" (ngSubmit)="save()" novalidate>
+    <label>
+      <span>Title</span>
+      <input type="text" formControlName="title" placeholder="Note title" />
+    </label>
+
+    <label>
+      <span>Content</span>
+      <textarea formControlName="content" rows="12" placeholder="Capture your thoughts..."></textarea>
+    </label>
+
+    <div class="form-actions">
+      <button type="submit" class="primary">{{ isEditMode() ? 'Save changes' : 'Create note' }}</button>
+      <button type="button" class="secondary" routerLink="/">Cancel</button>
+      <button type="button" class="danger" *ngIf="isEditMode()" (click)="delete()">Delete</button>
+    </div>
+  </form>
+</section>

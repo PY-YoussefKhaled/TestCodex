@@ -1,0 +1,17 @@
+@use 'sass:color';
+
+:root {
+  color-scheme: light dark;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: color.mix(#fafafa, #101010, 85%);
+}
+
+app-root {
+  display: block;
+  min-height: 100vh;
+}
