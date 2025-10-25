@@ -1,0 +1,19 @@
+<section class="note-list">
+  <div class="toolbar">
+    <a routerLink="/notes/new" class="create-button">Create note</a>
+  </div>
+
+  <p *ngIf="!hasNotes()" class="empty-state">
+    You don't have any notes yet. Click "Create note" to get started.
+  </p>
+
+  <ul *ngIf="hasNotes()" class="note-grid">
+    <li *ngFor="let note of notes()" class="note-card">
+      <a [routerLink]="['/notes', note.id]">
+        <h2>{{ note.title }}</h2>
+        <p class="note-preview">{{ note.content | slice: 0:120 }}<span *ngIf="note.content.length > 120">…</span></p>
+        <p class="meta">Updated {{ note.updatedAt | date: 'medium' }}</p>
+      </a>
+    </li>
+  </ul>
+</section>
