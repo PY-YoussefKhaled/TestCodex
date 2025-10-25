@@ -1,0 +1,77 @@
+.note-editor {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.back-link {
+  text-decoration: none;
+  color: #673ab7;
+  font-weight: 600;
+}
+
+h2 {
+  margin-top: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  span {
+    font-weight: 600;
+  }
+
+  input,
+  textarea {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 0.75rem;
+    font: inherit;
+  }
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 120ms ease-in;
+
+  &.primary {
+    background: #673ab7;
+    color: #fff;
+  }
+
+  &.secondary {
+    background: rgba(0, 0, 0, 0.08);
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  &.danger {
+    background: #e53935;
+    color: #fff;
+  }
+
+  &:hover {
+    filter: brightness(0.95);
+  }
+}
